@@ -30,6 +30,7 @@ module.exports = class Email {
       //Activate in gmail "less secure app" option
     });
   }
+
   async send(template, subject) {
     //1) render html based template
     const html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
